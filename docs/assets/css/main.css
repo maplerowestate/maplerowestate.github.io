@@ -1,0 +1,208 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+
+/* CSS Variables */
+:root {
+  --white: #FFFFFF;
+  --cream: #E5E3DC;
+  --copper: #D4967D;
+  --sage: #495A58;
+  --charcoal: #303636;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'EB Garamond', serif;
+  background-color: var(--cream);
+  color: var(--charcoal);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Authentication Page Styles */
+.auth-container {
+  max-width: 400px;
+  margin: 5rem auto;
+  padding: 2rem;
+  background-color: var(--white);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.estate-logo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.estate-logo h1 {
+  font-family: 'Pinyon Script', cursive;
+  color: var(--copper);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  color: var(--sage);
+  font-weight: 500;
+}
+
+.form-group input {
+  padding: 0.75rem;
+  border: 1px solid var(--sage);
+  border-radius: 4px;
+  font-family: 'EB Garamond', serif;
+  font-size: 1rem;
+}
+
+.submit-btn {
+  background-color: var(--sage);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'EB Garamond', serif;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--charcoal);
+}
+
+/* Main Content Styles */
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 4rem;
+  border-bottom: 2px solid var(--copper);
+  padding-bottom: 2rem;
+}
+
+header h1 {
+  font-family: 'Pinyon Script', cursive;
+  color: var(--copper);
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+nav {
+  background-color: var(--white);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--sage);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--copper);
+}
+
+/* Content Section Styles */
+.section {
+  background-color: var(--white);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.section h2 {
+  color: var(--sage);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--copper);
+  padding-bottom: 0.5rem;
+}
+
+.section p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+th, td {
+  padding: 0.75rem;
+  border: 1px solid var(--cream);
+}
+
+th {
+  background-color: var(--sage);
+  color: var(--white);
+}
+
+tr:nth-child(even) {
+  background-color: var(--cream);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-container {
+    padding: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background-color: var(--white);
+  }
+
+  .section {
+    box-shadow: none;
+    border: 1px solid var(--sage);
+  }
+}
