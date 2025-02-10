@@ -9,13 +9,42 @@
   --copper: #D4967D;
   --sage: #495A58;
   --charcoal: #303636;
+  
+  /* Add new variables for data visualization */
+  --chart-bg: var(--white);
+  --chart-grid: rgba(73, 90, 88, 0.1);
+  --chart-line: var(--copper);
+  --chart-tooltip-bg: var(--sage);
+  --chart-tooltip-text: var(--white);
+  
+  /* Add spacing variables for consistency */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  
+  /* Add transition variables */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
 }
 
-/* Global Styles */
-* {
+/* Reset and Base Styles */
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* Typography scale for responsive text */
+html {
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
 }
 
 body {
@@ -24,185 +53,154 @@ body {
   color: var(--charcoal);
   line-height: 1.6;
   min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Authentication Page Styles */
+/* Data Visualization Components */
+.chart-container {
+  background-color: var(--chart-bg);
+  border-radius: 8px;
+  padding: var(--spacing-lg);
+  margin: var(--spacing-md) 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.chart-title {
+  color: var(--sage);
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-md);
+}
+
+/* Recharts Customization */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: var(--chart-grid);
+}
+
+.recharts-tooltip-wrapper {
+  background-color: var(--chart-tooltip-bg);
+  border-radius: 4px;
+  padding: var(--spacing-xs) var(--spacing-sm);
+}
+
+.recharts-tooltip-label {
+  color: var(--chart-tooltip-text);
+}
+
+.recharts-line-curve {
+  stroke: var(--chart-line);
+  stroke-width: 2;
+}
+
+/* Interactive Elements */
+.interactive-element {
+  transition: transform var(--transition-normal), 
+              opacity var(--transition-normal);
+}
+
+.interactive-element:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+/* Flex Grid System */
+.grid {
+  display: grid;
+  gap: var(--spacing-md);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Authentication Components */
 .auth-container {
   max-width: 400px;
   margin: 5rem auto;
-  padding: 2rem;
+  padding: var(--spacing-xl);
   background-color: var(--white);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
 }
 
-.estate-logo {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.estate-logo h1 {
-  font-family: 'Pinyon Script', cursive;
-  color: var(--copper);
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.auth-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.form-group label {
-  color: var(--sage);
-  font-weight: 500;
-}
-
-.form-group input {
-  padding: 0.75rem;
+/* Form Components */
+.form-control {
+  width: 100%;
+  padding: var(--spacing-sm);
   border: 1px solid var(--sage);
   border-radius: 4px;
-  font-family: 'EB Garamond', serif;
-  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color var(--transition-fast);
 }
 
-.submit-btn {
-  background-color: var(--sage);
-  color: var(--white);
-  padding: 0.75rem 1.5rem;
+.form-control:focus {
+  outline: none;
+  border-color: var(--copper);
+  box-shadow: 0 0 0 2px rgba(212, 150, 125, 0.2);
+}
+
+/* Button Components */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-sm) var(--spacing-md);
   border: none;
   border-radius: 4px;
+  font-family: inherit;
+  font-weight: 500;
   cursor: pointer;
-  font-family: 'EB Garamond', serif;
-  font-size: 1.1rem;
-  transition: background-color 0.3s ease;
+  transition: background-color var(--transition-normal),
+              transform var(--transition-fast);
 }
 
-.submit-btn:hover {
-  background-color: var(--charcoal);
-}
-
-/* Main Content Styles */
-.main-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-header {
-  text-align: center;
-  margin-bottom: 4rem;
-  border-bottom: 2px solid var(--copper);
-  padding-bottom: 2rem;
-}
-
-header h1 {
-  font-family: 'Pinyon Script', cursive;
-  color: var(--copper);
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-}
-
-nav {
-  background-color: var(--white);
-  padding: 1rem;
-  margin-bottom: 2rem;
-  border-radius: 4px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
-
-nav a {
-  color: var(--sage);
-  text-decoration: none;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: var(--copper);
-}
-
-/* Content Section Styles */
-.section {
-  background-color: var(--white);
-  padding: 2rem;
-  margin-bottom: 2rem;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.section h2 {
-  color: var(--sage);
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  border-bottom: 1px solid var(--copper);
-  padding-bottom: 0.5rem;
-}
-
-.section p {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-}
-
-/* Tables */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1rem 0;
-}
-
-th, td {
-  padding: 0.75rem;
-  border: 1px solid var(--cream);
-}
-
-th {
+.btn-primary {
   background-color: var(--sage);
   color: var(--white);
 }
 
-tr:nth-child(even) {
-  background-color: var(--cream);
+.btn-primary:hover {
+  background-color: var(--charcoal);
+  transform: translateY(-1px);
 }
 
-/* Responsive Design */
+/* Loading States */
+.loading-skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--cream) 25%,
+    var(--white) 50%,
+    var(--cream) 75%
+  );
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Responsive Media Queries */
 @media (max-width: 768px) {
-  .main-container {
-    padding: 1rem;
+  .chart-container {
+    padding: var(--spacing-md);
   }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  header h1 {
-    font-size: 2.5rem;
+  
+  .grid {
+    grid-template-columns: 1fr;
   }
 }
 
 /* Print Styles */
 @media print {
-  body {
-    background-color: var(--white);
+  .chart-container {
+    break-inside: avoid;
   }
-
-  .section {
-    box-shadow: none;
-    border: 1px solid var(--sage);
+  
+  .no-print {
+    display: none;
   }
 }
