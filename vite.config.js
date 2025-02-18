@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/maple-row-estate/', // Replace with your repository name
+  base: '/', // Changed to '/' for user/organization page
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
