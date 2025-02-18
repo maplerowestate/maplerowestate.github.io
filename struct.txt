@@ -1,0 +1,27 @@
+maplerowestate/
+├── public/               # Static assets that don't need processing
+│   └── favicon.ico      # Site favicon
+├── src/
+│   ├── components/      # Reusable React components
+│   │   ├── common/     # Shared components like buttons, inputs
+│   │   ├── layout/     # Layout components like header, footer
+│   │   └── sections/   # Page section components
+│   ├── styles/         # Global styles and themes
+│   │   ├── variables.css  # CSS variables
+│   │   └── global.css    # Global styles
+│   ├── pages/          # Page components
+│   │   ├── Home/
+│   │   ├── About/
+│   │   └── Contact/
+│   ├── assets/         # Static assets that need processing
+│   ├── utils/          # Utility functions
+│   ├── App.jsx         # Root component
+│   ├── App.css         # App-specific styles
+│   ├── main.jsx        # Application entry point
+│   └── index.css       # Entry point styles
+├── dist/               # Build output directory
+├── .gitignore         # Git ignore file
+├── index.html         # Entry HTML file
+├── package.json       # Project dependencies and scripts
+├── vite.config.js     # Vite configuration
+└── README.md          # Project documentation

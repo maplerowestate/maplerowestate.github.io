@@ -1,0 +1,42 @@
+/* App-specific resets and overrides */
+:root {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Matches header height for scroll-to-anchor */
+}
+
+/* Selection styling */
+::selection {
+  background-color: var(--color-sage);
+  color: var(--color-white);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-sage);
+  border-radius: var(--border-radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-copper);
+}
+
+/* Focus outline styling */
+:focus-visible {
+  outline: 2px solid var(--color-sage);
+  outline-offset: 2px;
+}
+
+/* Prevent mobile tap highlight */
+@media (hover: none) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
