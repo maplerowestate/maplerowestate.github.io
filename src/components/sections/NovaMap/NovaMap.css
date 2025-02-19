@@ -1,0 +1,145 @@
+/* NovaMap.css */
+.map-container {
+  --color-primary: #2C5530;        /* Deep Forest Green */
+  --color-secondary: #8B4513;      /* Saddle Brown */
+  --color-accent: #DAA520;         /* Golden Rod */
+  --color-background: #FAFAF9;     /* Off White */
+  --color-text: #1A1A1A;           /* Near Black */
+  --color-text-light: #4A4A4A;     /* Light Text */
+  --color-border: #E5E5E5;         /* Light Gray */
+  --color-sage: #495A58;           /* Sage Green */
+  --color-copper: #D4967D;         /* Copper */
+  --color-cream: #E5E3DC;          /* Cream */
+  
+  background-color: var(--color-background);
+  border-radius: 0.5rem;
+  transition: all 250ms ease-in-out;
+}
+
+.map-container:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.map-title {
+  color: var(--color-sage);
+  font-family: 'EB Garamond', serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.map-legend {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-color {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.25rem;
+}
+
+.legend-label {
+  font-family: 'EB Garamond', serif;
+  color: var(--color-text-light);
+  font-size: 0.875rem;
+}
+
+.map-controls {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.map-control-button {
+  background-color: white;
+  border: 1px solid var(--color-border);
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+
+.map-control-button:hover {
+  background-color: var(--color-cream);
+  border-color: var(--color-sage);
+}
+
+.county-tooltip {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  font-family: 'EB Garamond', serif;
+  font-size: 0.875rem;
+  color: var(--color-text);
+  pointer-events: none;
+}
+
+.county-label {
+  font-family: 'EB Garamond', serif;
+  font-size: 0.75rem;
+  fill: var(--color-text-light);
+  pointer-events: none;
+}
+
+.marker-label {
+  font-family: 'EB Garamond', serif;
+  font-size: 0.875rem;
+  fill: var(--color-text);
+  pointer-events: none;
+}
+
+.marker-dot {
+  fill: var(--color-copper);
+  stroke: white;
+  stroke-width: 2;
+  transition: all 250ms ease-in-out;
+}
+
+.marker-dot:hover {
+  fill: var(--color-sage);
+  transform: scale(1.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .map-legend {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+  
+  .map-title {
+    font-size: 1.25rem;
+  }
+  
+  .county-label {
+    display: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .map-container {
+    box-shadow: none;
+    border: 1px solid var(--color-border);
+  }
+  
+  .map-controls {
+    display: none;
+  }
+}

@@ -1,7 +1,12 @@
 import { useState, useEffect, useRef } from 'react'
+
 import './Business.css'
 import '../../styles/FullPageLayout.css'
-import PortfolioCarousel from '../../components/sections/PortfolioCarousel/PortfolioCarousel';
+import PortfolioCarousel from '../../components/sections/PortfolioCarousel/PortfolioCarousel'
+import NovaMap from '../../components/sections/NovaMap/NovaMap.jsx'
+import ProblemSection from '../../components/sections/ProblemCard/ProblemCard.jsx'
+import SolutionGrid from '../../components/sections/SolutionGrid/SolutionGrid.jsx'
+import HorseBoardingMarketChart from '../../components/sections/MarketCharts/HorseBoardingMarketChart.jsx'
 
 const Business = () => {
   const [showBackToTop, setShowBackToTop] = useState(false)
@@ -225,183 +230,19 @@ const Business = () => {
         <div className="container">
           <h2>The Problem</h2>
           <div className="content-section">
-            <div className="mb-12">
-        <h3 className="text-xl font-semibold mb-6">Current Market Gaps</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h4 className="text-lg font-medium mb-3">Limited Regional Competition</h4>
-            <ul className="list-disc pl-4">
-              <li>First local producer of honey mead brandy</li>
-              <li>Limited regional competition in craft mead production</li>
-              <li>Untapped opportunity in luxury beverage sector</li>
-            </ul>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h4 className="text-lg font-medium mb-3">Lack of Integrated Experiences</h4>
-            <ul className="list-disc pl-4">
-              <li>Missing connection between luxury products and exclusive experiences</li>
-              <li>Gap in comprehensive agricultural experiences</li>
-            </ul>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h4 className="text-lg font-medium mb-3">Underserved Affluent Market</h4>
-            <ul className="list-disc pl-4">
-              <li>Affluent D.C. area population lacks premium agricultural experiences</li>
-              <li>Growing demand for luxury experiential offerings</li>
-              <li>Limited options for exclusive memberships</li>
-            </ul>
-          </div>
-        </div>
-            </div>
-
-            <div className="mb-12">
-        <h3 className="text-xl font-semibold mb-6">Key Market Challenges</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h4 className="text-lg font-medium mb-3">Market Fragmentation</h4>
-            <p className="text-gray-700">
-              Agricultural and luxury experiences are typically offered separately, with no single provider offering comprehensive premium services. This creates disconnected experiences across different venues.
-            </p>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h4 className="text-lg font-medium mb-3">Quality Inconsistency</h4>
-            <p className="text-gray-700">
-              Current market offerings show varying standards in agricultural products and services, with inconsistent luxury experiences and lack of premium quality control across multiple services.
-            </p>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h4 className="text-lg font-medium mb-3">Limited Value Integration</h4>
-            <p className="text-gray-700">
-              Few venues successfully combine traditional agriculture with modern luxury, missing potential synergies between different agricultural and hospitality services.
-            </p>
-          </div>
-        </div>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg shadow">
-        <h3 className="text-xl font-semibold mb-4">Why This Matters</h3>
-        <p className="text-gray-700 mb-4">
-          The absence of integrated, premium agricultural experiences in Northern Virginia's luxury market represents a significant opportunity. The region's affluent population, combined with strong demand for luxury experiences, creates ideal conditions for a comprehensive estate offering.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
-          <div className="border-l-4 border-sage pl-4">
-            <span className="block font-medium">Premium Products</span>
-          </div>
-          <div className="border-l-4 border-sage pl-4">
-            <span className="block font-medium">Exclusive Experiences</span>
-          </div>
-          <div className="border-l-4 border-sage pl-4">
-            <span className="block font-medium">Multiple Revenue Streams</span>
-          </div>
-          <div className="border-l-4 border-sage pl-4">
-            <span className="block font-medium">Strong Market Position</span>
-          </div>
-        </div>
-            </div>
+            <ProblemSection />
           </div>
         </div>
       </section>
 
       {/* Our Solution Section */}
       <section id="solution" className="section">
-        <div className="container">
+        <div className="solution-container">
           <h2>Our Solution</h2>
           <div className="content-section">
-            {/* Comprehensive Overview */}
-            <div className="bg-white p-6 rounded-lg shadow mb-8">
-        <h3 className="text-xl font-semibold mb-4">Comprehensive Estate Experience</h3>
-        <p className="text-gray-700 mb-4">
-          Maple Row Estate offers a distinctive investment opportunity in Northern Virginia's luxury agricultural 
-          and hospitality market. Our comprehensive business model combines premium alcohol production, 
-          high-end equestrian services, and exclusive member experiences into a cohesive, profitable enterprise.
-        </p>
-            </div>
-
-            {/* Core Solutions Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-        <div className="bg-white p-6 rounded-lg shadow">
-          <h4 className="text-lg font-medium mb-3">Premium Product Integration</h4>
-          <ul className="space-y-2">
-            <li>First local producer of honey mead brandy</li>
-            <li>Craft mead production with limited regional competition</li>
-            <li>Premium alfalfa hay cultivation</li>
-            <li>Multiple value-added products</li>
-          </ul>
-        </div>
-
-        <div className="bg-white p-6 rounded-lg shadow">
-          <h4 className="text-lg font-medium mb-3">Exclusive Membership Model</h4>
-          <ul className="space-y-2">
-            <li>Private club memberships</li>
-            <li>Personalized retail alcohol experiences</li>
-            <li>Priority access to estate products</li>
-            <li>Exclusive member events</li>
-          </ul>
-        </div>
-
-        <div className="bg-white p-6 rounded-lg shadow">
-          <h4 className="text-lg font-medium mb-3">Premium Services</h4>
-          <ul className="space-y-2">
-            <li>High-end equestrian facilities</li>
-            <li>Comprehensive horse boarding services</li>
-            <li>Professional management and care</li>
-            <li>Luxury agricultural experiences</li>
-          </ul>
-        </div>
-            </div>
-
-            {/* Key Advantages */}
-            <div className="bg-white p-6 rounded-lg shadow mb-8">
-        <h3 className="text-xl font-semibold mb-4">Key Advantages</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <h4 className="text-lg font-medium mb-3">Strategic Location</h4>
-            <ul className="space-y-2">
-              <li>Situated in affluent Fauquier County, VA</li>
-              <li>Proximity to Washington D.C.'s high-net-worth population</li>
-              <li>Prime position in Virginia's horse and wine country</li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-lg font-medium mb-3">Business Resilience</h4>
-            <ul className="space-y-2">
-              <li>Multiple revenue streams provide natural hedging</li>
-              <li>Diverse portfolio of complementary services</li>
-              <li>Strong barriers to entry</li>
-            </ul>
-          </div>
-        </div>
-            </div>
-
-            {/* Implementation Approach */}
-            <div className="bg-white p-6 rounded-lg shadow">
-        <h3 className="text-xl font-semibold mb-4">Implementation Approach</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div>
-            <h4 className="text-lg font-medium mb-3">Quality Control</h4>
-            <p className="text-gray-700">
-              Strict quality standards across all products and services, with comprehensive monitoring 
-              and control systems.
-            </p>
-          </div>
-          <div>
-            <h4 className="text-lg font-medium mb-3">Sustainable Practices</h4>
-            <p className="text-gray-700">
-              Commitment to sustainable farming practices and ethical stewardship of the land and resources.
-            </p>
-          </div>
-          <div>
-            <h4 className="text-lg font-medium mb-3">Professional Management</h4>
-            <p className="text-gray-700">
-              Expert teams dedicated to each business component, ensuring premium service delivery and 
-              customer satisfaction.
-            </p>
-          </div>
-        </div>
+            {/* Solution Grid Component */}
+            <SolutionGrid />
+            <div className="mt-12">
             </div>
           </div>
         </div>
@@ -411,8 +252,8 @@ const Business = () => {
       <section id="market-validation" className="section">
         <div className="container">
           <h2>Market Validation</h2>
-          <div className="content-section">
-            <p>Evidence of market demand and opportunity.</p>
+          <div className="content-section" style={{ width: '100%', height: 400}}>
+            <HorseBoardingMarketChart />
           </div>
         </div>
       </section>
