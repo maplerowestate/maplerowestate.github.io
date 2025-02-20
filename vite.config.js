@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react()],
   base: '/', // Changed to '/' for user/organization page
   build: {
-    outDir: 'dist',
+    outDir: 'docs',
     assetsDir: 'assets',
     rollupOptions: {
       output: {
