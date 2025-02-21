@@ -10,6 +10,11 @@
   padding-top: 120px; /* Height of fixed header */
 }
 
+/* Apply EB Garamond globally */
+body {
+  font-family: 'EB Garamond', serif;
+}
+
 /* Header Styles */
 .header {
   position: fixed;

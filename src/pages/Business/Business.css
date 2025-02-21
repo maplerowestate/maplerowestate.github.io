@@ -244,6 +244,7 @@
   cursor: pointer;
   transition: all var(--transition-normal);
   position: relative;
+  //overflow: hidden; // don't activate this unless there's something you need to debug
 }
 
 .section-nav-dot:hover,
@@ -355,6 +356,24 @@
 /* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'EB Garamond', serif;
+  overflow: hidden;
+}
+
+button {
+  font-family: 'EB Garamond', serif;
+  background-color: var(--color-sage);
+  color: var(--color-white);
+  font-size: 0.875rem;
+}
+
+button:hover {
+  background-color: var(--color-copper);
+  color: var(--color-black);
+  transform: translateY(-2px);
 }
 
 /* Back to Top Button */

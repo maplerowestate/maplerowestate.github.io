@@ -2,11 +2,13 @@ import { useState, useEffect, useRef } from 'react'
 
 import './Business.css'
 import '../../styles/FullPageLayout.css'
+import RapidCounter from '../../components/common/RapidCounter.jsx'
 import PortfolioCarousel from '../../components/sections/PortfolioCarousel/PortfolioCarousel'
 import NovaMap from '../../components/sections/NovaMap/NovaMap.jsx'
 import ProblemSection from '../../components/sections/ProblemCard/ProblemCard.jsx'
 import SolutionGrid from '../../components/sections/SolutionGrid/SolutionGrid.jsx'
 import HorseBoardingMarketChart from '../../components/sections/MarketCharts/HorseBoardingMarketChart.jsx'
+import MarketValidation from '../../components/sections/MarketCharts/MarketValidation.jsx'
 
 const Business = () => {
   const [showBackToTop, setShowBackToTop] = useState(false)
@@ -113,7 +115,9 @@ const Business = () => {
   useEffect(() => {
     const handleScroll = () => {
       setShowBackToTop(window.scrollY > 400)
-      const isAtBottom = window.innerHeight + window.scrollY >= document.body.scrollHeight
+      //const isAtBottom = window.innerHeight + window.scrollY >= document.body.scrollHeight
+      const isAtBottom = sectionId === '#join-us'
+      console.log(sectionId)
       setShowFooter(isAtBottom)
     }
 
@@ -252,8 +256,8 @@ const Business = () => {
       <section id="market-validation" className="section">
         <div className="container">
           <h2>Market Validation</h2>
-          <div className="content-section" style={{ width: '100%', height: 400}}>
-            <HorseBoardingMarketChart />
+          <div className="content-section" style={{ width: '100%', height: '100%'}}>
+            <MarketValidation />
           </div>
         </div>
       </section>
@@ -552,11 +556,14 @@ const Business = () => {
         className={`back-to-top ${showBackToTop ? 'visible' : ''}`}
         onClick={scrollToTop}
         aria-label="Back to top"
+        style={{ display: 'auto' }}
       >
         ↑
       </button>
     </div>
   )
 }
+
+// FOOTER GO AWAY
 
 export default Business

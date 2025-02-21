@@ -41,8 +41,7 @@ const ProblemCard = ({ title, icon: Icon, annotations }) => {
         <div className="relative">
           <h4 className="text-lg font-medium mb-3 flex items-center gap-2 border-b-2 border-gray-200 pb-1">
             <Icon className="w-6 h-6" />
-            <p> </p>
-            <span>{title}</span>
+            <span>&nbsp;{title}</span>
           </h4>
           
           <div className={`
