@@ -1,0 +1,51 @@
+/* Container styles */
+.image-container {
+  width: 200px; /* Square width */
+  height: 200px; /* Square height */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Image styles */
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+  filter: grayscale(100%); /* Start in greyscale */
+}
+
+/* Hover effect: fade in color from greyscale */
+.image-container:hover .image {
+  filter: grayscale(0%); /* Remove greyscale on hover */
+}
+
+/* Arrow style between sections */
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Arrow pointing right */
+.arrow-shape-right {
+  width: 40px;
+  height: 40px;
+  background-color: #495A58; /* Same color as before */
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Paragraph style with added padding */
+p {
+  padding-top: 10px;
+  padding-bottom: 10px; /* Padding added to the bottom of paragraphs */
+  text-align: center; /* Center the text */
+  color: #6B7280; /* Slightly lighter gray color */
+  line-height: 1.6; /* Make the text a little more spaced out */
+}
+

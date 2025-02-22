@@ -4,11 +4,24 @@ import './Business.css'
 import '../../styles/FullPageLayout.css'
 import RapidCounter from '../../components/common/RapidCounter.jsx'
 import PortfolioCarousel from '../../components/sections/PortfolioCarousel/PortfolioCarousel'
-import NovaMap from '../../components/sections/NovaMap/NovaMap.jsx'
+
 import ProblemSection from '../../components/sections/ProblemCard/ProblemCard.jsx'
 import SolutionGrid from '../../components/sections/SolutionGrid/SolutionGrid.jsx'
+
 import HorseBoardingMarketChart from '../../components/sections/MarketCharts/HorseBoardingMarketChart.jsx'
 import MarketValidation from '../../components/sections/MarketCharts/MarketValidation.jsx'
+import MarketComposition from '../../components/sections/MarketCharts/MarketComposition.jsx'
+
+import Mead from '../../components/sections/Products/Mead.jsx'
+import Brandy from '../../components/sections/Products/Brandy.jsx'
+import Hay from '../../components/sections/Products/Hay.jsx'
+
+import PrivateMembership from '../../components/sections/Services/PrivateMembership.jsx'
+import PrivateSales from '../../components/sections/Services/PrivateSales.jsx'
+import HorseBoarding from '../../components/sections/Services/HorseBoarding.jsx'
+
+import NovaMap from '../../components/sections/NovaMap/NovaMap.jsx'
+
 
 const Business = () => {
   const [showBackToTop, setShowBackToTop] = useState(false)
@@ -266,50 +279,25 @@ const Business = () => {
       <section id="market-composition" className="section">
         <div className="container">
           <h2>Market Composition</h2>
-          <div className="market-grid">
-            <div className="market-card">
-              <h4>Demographics</h4>
-              <ul>
-                <li>High-net-worth individuals</li>
-                <li>Luxury experience seekers</li>
-                <li>Agricultural enthusiasts</li>
-              </ul>
-            </div>
-            <div className="market-card">
-              <h4>Geographic Focus</h4>
-              <ul>
-                <li>Washington D.C. metropolitan area</li>
-                <li>Virginia's horse and wine country</li>
-                <li>Regional luxury markets</li>
-              </ul>
-            </div>
-          </div>
+          <MarketComposition />
         </div>
       </section>
 
       {/* Products Section */}
       <section id="products" className="section">
         <div className="container">
-          <h2>Products</h2>
-          <div className="streams-grid">
-            <div className="stream-card">
-              <h4>Honey Mead</h4>
-              <p>Premium craft mead targeting luxury market.</p>
-              <ul>
-                <li>100 bottles monthly production</li>
-                <li>Multiple product lines: Basic, Aged, and Fine</li>
-                <li>Premium positioning</li>
-              </ul>
-            </div>
-            <div className="stream-card">
-              <h4>Honey Mead Brandy</h4>
-              <p>Exclusive distillation process and premium positioning.</p>
-              <ul>
-                <li>First local producer in region</li>
-                <li>Temperature-controlled aging facility</li>
-                <li>Luxury market focus</li>
-              </ul>
-            </div>
+          <div className="content-section">
+            <h2>Products</h2>
+            <hr style={{ marginTop: '4rem', marginBottom: '4rem' }} className="my-8" />
+            
+            <Mead />
+            <hr style={{ marginTop: '4rem', marginBottom: '4rem' }} className="my-8" />
+            
+            <Brandy />
+            <hr style={{ marginTop: '4rem', marginBottom: '4rem' }} className="my-8" />
+            
+            <Hay />
+            <hr style={{ marginTop: '4rem', marginBottom: '4rem' }} className="my-8" />
           </div>
         </div>
       </section>
@@ -317,26 +305,18 @@ const Business = () => {
       {/* Services Section */}
       <section id="services" className="section">
         <div className="container">
-          <h2>Services</h2>
-          <div className="streams-grid">
-            <div className="stream-card">
-              <h4>Horse Boarding</h4>
-              <p>Comprehensive equestrian services and facilities.</p>
-              <ul>
-                <li>Premium facility amenities</li>
-                <li>Full-service care packages</li>
-                <li>Professional staff</li>
-              </ul>
-            </div>
-            <div className="stream-card">
-              <h4>Private Club Membership</h4>
-              <p>Exclusive access and experiences.</p>
-              <ul>
-                <li>Tiered membership levels</li>
-                <li>Exclusive events and tastings</li>
-                <li>Priority product access</li>
-              </ul>
-            </div>
+          <div className="content-section">
+            <h2>Services</h2>
+            <hr style={{ marginTop: '4rem', marginBottom: '4rem' }} className="my-8" />
+            
+            <PrivateMembership />
+            <hr style={{ marginTop: '4rem', marginBottom: '4rem' }} className="my-8" />
+            
+            <PrivateSales />
+            <hr style={{ marginTop: '4rem', marginBottom: '4rem' }} className="my-8" />
+            
+            <HorseBoarding />
+            <hr style={{ marginTop: '4rem', marginBottom: '4rem' }} className="my-8" />
           </div>
         </div>
       </section>
