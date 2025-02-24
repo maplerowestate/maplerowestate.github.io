@@ -74,7 +74,7 @@ const Brandy = () => {
                 transition={{ duration: 0.5, delay: 0.6 }}
               >
                 <div className="image-text mb-4">
-                  <h3 className="text-xl font-semibold text-gray-800">Step 1: Make Mead</h3>
+                  <h3 className="text-xl font-semibold text-gray-800">Step 1: Making Mead</h3>
                   <p className="text-gray-500 mt-2">
                     The first step is creating our base mead, using the finest honey and ingredients. Since distillation creates nothing new, but rather refines the base, our process ensures that the fermentation produces a clean and balanced mead that will form the foundation for the brandy.
                   </p>

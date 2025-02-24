@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
 
-// Define microregions data outside component to avoid recreation
 const microregionsData = {
   'Gard': 'Cévennes: Nestled between the Cévennes mountains and the Mediterranean.',
   'Loire': 'Côte Roannaise: Located in the northern Loire Valley, specializes in Gamay.',
@@ -24,30 +23,34 @@ const WineMap = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Load GeoJSON data on component mount
   useEffect(() => {
     const loadMapData = async () => {
       try {
-        // Fetch GeoJSON files for the countries
-        const franceResponse = await fetch('/france_microregions.geojson');
-        const italyResponse = await fetch('/italy_microregions.geojson');
-        const spainResponse = await fetch('/spain_microregions.geojson');
+        const franceResponse = await fetch('france_microregions.geojson');
+        const italyResponse = await fetch('italy_microregions.geojson');
+        const spainResponse = await fetch('spain_microregions.geojson');
 
-        // Check for successful response
         if (!franceResponse.ok || !italyResponse.ok || !spainResponse.ok) {
           throw new Error('Failed to load GeoJSON files');
         }
 
-        // Parse JSON responses
         const franceData = await franceResponse.json();
         const italyData = await italyResponse.json();
         const spainData = await spainResponse.json();
 
-        setMapData({
-          france: franceData,
-          italy: italyData,
-          spain: spainData
-        });
+        // Check if GeoJSON data is valid
+        const validateGeoJSON = (data) => data && data.features && Array.isArray(data.features);
+
+        if (validateGeoJSON(franceData) && validateGeoJSON(italyData) && validateGeoJSON(spainData)) {
+          setMapData({
+            france: franceData,
+            italy: italyData,
+            spain: spainData
+          });
+        } else {
+          throw new Error('Invalid GeoJSON structure');
+        }
+
         setLoading(false);
       } catch (err) {
         console.error('Failed to load map data:', err);
