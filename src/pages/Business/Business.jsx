@@ -20,6 +20,13 @@ import PrivateMembership from '../../components/sections/Services/PrivateMembers
 import PrivateSales from '../../components/sections/Services/PrivateSales.jsx'
 import HorseBoarding from '../../components/sections/Services/HorseBoarding.jsx'
 
+import BusinessModel from '../../components/sections/BusinessModel/BusinessModel.jsx'
+import MarketAdoption from '../../components/sections/MarketAdoption/MarketAdoption.jsx'
+import CompetitorRadarChart from '../../components/sections/Competition/CompetitorRadarChart.jsx'
+import CompetitiveAdvantages from '../../components/sections/Competition/CompetitiveAdvantages.jsx'
+
+import OurTeam from '../../components/sections/Team/OurTeam.jsx'
+
 import NovaMap from '../../components/sections/NovaMap/NovaMap.jsx'
 
 
@@ -326,7 +333,7 @@ const Business = () => {
         <div className="container">
           <h2>Business Model</h2>
           <div className="content-section">
-            <p>Revenue streams and operational framework.</p>
+            <BusinessModel />
           </div>
         </div>
       </section>
@@ -336,7 +343,7 @@ const Business = () => {
         <div className="container">
           <h2>Market Adoption</h2>
           <div className="content-section">
-            <p>Strategy for market penetration and growth.</p>
+            <MarketAdoption />
           </div>
         </div>
       </section>
@@ -346,7 +353,7 @@ const Business = () => {
         <div className="container">
           <h2>Competition</h2>
           <div className="content-section">
-            <p>Analysis of competitive landscape.</p>
+            <CompetitorRadarChart />
           </div>
         </div>
       </section>
@@ -355,23 +362,8 @@ const Business = () => {
       <section id="competitive-advantages" className="section">
         <div className="container">
           <h2>Competitive Advantages</h2>
-          <div className="operations-grid">
-            <div className="operations-card">
-              <h4>Production Advantages</h4>
-              <ul>
-                <li>First local mead brandy producer</li>
-                <li>Premium quality control processes</li>
-                <li>Temperature-controlled aging</li>
-              </ul>
-            </div>
-            <div className="operations-card">
-              <h4>Market Advantages</h4>
-              <ul>
-                <li>Prime location</li>
-                <li>Multiple revenue streams</li>
-                <li>Exclusive membership model</li>
-              </ul>
-            </div>
+          <div className="content-section">
+            <CompetitiveAdvantages />
           </div>
         </div>
       </section>
@@ -380,23 +372,8 @@ const Business = () => {
       <section id="our-team" className="section">
         <div className="container">
           <h2>Our Team</h2>
-          <div className="management-grid">
-            <div className="management-card">
-              <h4>Executive Team</h4>
-              <ul>
-                <li>Experienced leadership</li>
-                <li>Industry expertise</li>
-                <li>Strategic vision</li>
-              </ul>
-            </div>
-            <div className="management-card">
-              <h4>Operations Team</h4>
-              <ul>
-                <li>Skilled production staff</li>
-                <li>Agricultural experts</li>
-                <li>Customer service specialists</li>
-              </ul>
-            </div>
+          <div className="content-section">
+            <OurTeam />
           </div>
         </div>
       </section>

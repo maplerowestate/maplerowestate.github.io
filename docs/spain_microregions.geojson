@@ -1973,7 +1973,9 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name": "Galicia"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
