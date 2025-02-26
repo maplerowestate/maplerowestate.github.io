@@ -12,7 +12,10 @@ const FlipCard = ({ title, frontImage, backContent }) => {
         <div
           className="flex flex-col items-center justify-center w-full"
           style={{ width: '350px', height: '350px' }}
-          onMouseEnter={() => setIsFlipped(true)}
+          onMouseEnter={(e) => {
+            e.preventDefault();
+            setIsFlipped(true);
+          }}
         >
           <div className="w-full h-full flex flex-col items-center justify-between bg-white rounded-lg shadow-lg overflow-hidden">
             <div className="image-container">
@@ -33,7 +36,10 @@ const FlipCard = ({ title, frontImage, backContent }) => {
         <div 
           className="flex flex-col items-center justify-center w-full"
           style={{ width: '350px', height: '350px' }}
-          onMouseLeave={() => setIsFlipped(false)}
+          onMouseLeave={(e) => {
+            e.preventDefault();
+            setIsFlipped(false)
+          }}
         >
           <div className="w-full h-full overflow-auto flex flex-col bg-white rounded-lg shadow-lg p-4">
             <h3 className="text-lg font-semibold text-gray-800 mb-2">{title}</h3>

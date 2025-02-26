@@ -253,7 +253,10 @@ const BusinessModel = () => {
           <hr style={{ marginTop: '1rem', marginBottom: '1rem' }} className="my-8" />
           <div className="flex flex-wrap gap-4 mb-8">
             <button
-              onClick={() => setSelectedView('Aggregate')}
+              onClick={(e) => {
+                e.preventDefault();
+                setSelectedView('Aggregate');
+              }}
               className={`px-4 py-2 rounded-lg transition-colors font-serif ${
                 selectedView === 'Aggregate'
                   ? 'bg-gray-800 text-white'
@@ -265,7 +268,10 @@ const BusinessModel = () => {
             {businessComponents.map((component) => (
               <button
                 key={component.name}
-                onClick={() => setSelectedView(component.name)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setSelectedView(component.name);
+                }}
                 className={`px-4 py-2 rounded-lg transition-colors font-serif ${
                   selectedView === component.name
                     ? 'bg-gray-800 text-white'
@@ -279,7 +285,10 @@ const BusinessModel = () => {
           <hr style={{ marginTop: '1rem', marginBottom: '1rem' }} className="my-8" />
           <div className="flex justify-center items-center gap-4 mb-8">
             <button
-              onClick={() => setSelectedYear('All')}
+              onClick={(e) => {
+                e.preventDefault();
+                setSelectedYear('All');
+              }}
               className={`px-4 py-2 rounded-lg transition-colors font-serif ${
                 selectedYear === 'All'
                   ? 'bg-gray-800 text-white'
@@ -291,7 +300,10 @@ const BusinessModel = () => {
             {['Year 1', 'Year 2', 'Year 3', 'Year 3+'].map((year) => (
               <button
                 key={year}
-                onClick={() => setSelectedYear(year)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setSelectedYear(year);
+                }}
                 className={`px-4 py-2 rounded-lg transition-colors font-serif ${
                   selectedYear === year
                     ? 'bg-gray-800 text-white'

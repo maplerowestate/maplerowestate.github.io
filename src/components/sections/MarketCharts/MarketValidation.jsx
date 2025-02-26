@@ -177,7 +177,10 @@ const MarketValidation = () => {
         
         <div className="flex flex-wrap gap-4 mb-8">
           <button
-            onClick={() => setSelectedView('Aggregate')}
+            onClick={(e) => {
+              e.preventDefault();
+              setSelectedView('Aggregate');
+            }}
             className={`px-4 py-2 rounded-lg transition-colors text-xs ${
               selectedView === 'Aggregate'
                 ? 'bg-gray-800 text-white'
@@ -189,7 +192,10 @@ const MarketValidation = () => {
           {marketData.map((component) => (
             <button
               key={component.name}
-              onClick={() => setSelectedView(component.name)}
+              onClick={(e) => {
+                e.preventDefault();
+                setSelectedView(component.name);
+              }}
               className={`px-4 py-2 rounded-lg transition-colors text-base font-serif ${
                 selectedView === component.name
                   ? 'bg-gray-800 text-white'
