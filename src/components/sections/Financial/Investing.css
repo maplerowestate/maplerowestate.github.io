@@ -1,0 +1,26 @@
+.white-text {
+  color: white !important;
+}
+
+p.subtext {
+  color: #A7C7E7 !important;
+}
+
+button:hover p {
+  color: black !important;
+  opacity: 0.5;
+}
+
+h1 {
+  color: white;
+}
+
+RapidCounter {
+  color: white !important;
+}
+
+button {
+  color: white !important;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}

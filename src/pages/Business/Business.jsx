@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from 'react'
 
 import './Business.css'
 import '../../styles/FullPageLayout.css'
-import RapidCounter from '../../components/common/RapidCounter.jsx'
 import PortfolioCarousel from '../../components/sections/PortfolioCarousel/PortfolioCarousel'
 
 import ProblemSection from '../../components/sections/ProblemCard/ProblemCard.jsx'
@@ -26,6 +25,7 @@ import CompetitorRadarChart from '../../components/sections/Competition/Competit
 import CompetitiveAdvantages from '../../components/sections/Competition/CompetitiveAdvantages.jsx'
 
 import OurTeam from '../../components/sections/Team/OurTeam.jsx'
+import Investing from '../../components/sections/Financial/Investing.jsx'
 
 import NovaMap from '../../components/sections/NovaMap/NovaMap.jsx'
 
@@ -382,108 +382,8 @@ const Business = () => {
       <section id="financial" className="section">
         <div className="container">
           <h2>Financial</h2>
-          <div className="subsection">
-            <h3>Capital Requirements</h3>
-            <div className="financials-grid">
-              <div className="financial-card">
-                <h4>Total Investment</h4>
-                <p className="amount">$5.7M - $6.2M</p>
-                <p className="note">Initial Capital Requirement</p>
-              </div>
-              <div className="financial-card">
-                <h4>Property Acquisition</h4>
-                <p className="amount">$5.3M</p>
-                <p className="note">Target Value</p>
-              </div>
-              <div className="financial-card">
-                <h4>Operating Capital</h4>
-                <p className="amount">$700K</p>
-                <p className="note">First Year Operations</p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="subsection">
-            <h3>Revenue Projections</h3>
-            <div className="financials-grid">
-              <div className="financial-card">
-                <h4>Year 1</h4>
-                <p className="amount">$383,000</p>
-              </div>
-              <div className="financial-card">
-                <h4>Year 2</h4>
-                <p className="amount">$1,224,000</p>
-              </div>
-              <div className="financial-card">
-                <h4>Year 3</h4>
-                <p className="amount">$2,126,000</p>
-              </div>
-              <div className="financial-card">
-                <h4>Beyond Year 3</h4>
-                <p className="amount">$2,862,000+</p>
-                <p className="note">20% Annual Growth</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="subsection">
-            <h3>Revenue Breakdown</h3>
-            <div className="revenue-table">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Revenue Stream</th>
-                    <th>Year 1</th>
-                    <th>Year 2</th>
-                    <th>Year 3</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Honey Mead</td>
-                    <td>-</td>
-                    <td>$90,000</td>
-                    <td>$208,000</td>
-                  </tr>
-                  <tr>
-                    <td>Honey Mead Brandy</td>
-                    <td>-</td>
-                    <td>$123,000</td>
-                    <td>$292,000</td>
-                  </tr>
-                  <tr>
-                    <td>Premium Alfalfa Hay</td>
-                    <td>$144,000</td>
-                    <td>$192,000</td>
-                    <td>$268,000</td>
-                  </tr>
-                  <tr>
-                    <td>Private Club Membership</td>
-                    <td>$57,000</td>
-                    <td>$403,000</td>
-                    <td>$787,000</td>
-                  </tr>
-                  <tr>
-                    <td>Private Alcohol Sales</td>
-                    <td>$30,000</td>
-                    <td>$90,000</td>
-                    <td>$100,000</td>
-                  </tr>
-                  <tr>
-                    <td>Horse Boarding Services</td>
-                    <td>$134,000</td>
-                    <td>$296,000</td>
-                    <td>$384,000</td>
-                  </tr>
-                  <tr>
-                    <td>Social Media</td>
-                    <td>$18,000</td>
-                    <td>$30,000</td>
-                    <td>$87,000</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+          <div className="content-section">
+            <Investing />
           </div>
         </div>
       </section>
