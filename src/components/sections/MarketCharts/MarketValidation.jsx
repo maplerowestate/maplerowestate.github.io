@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import RapidCounter from '../../common/RapidCounter.jsx'
+import './MarketValidation.css'
 
 // Import EB Garamond font
 const loadFont = () => {
@@ -232,17 +233,17 @@ const MarketValidation = () => {
                 <thead>
                     <tr>
                         <th className="p-4 text-center font-normal">
-                            <h3 className="text-sm text-gray-600">
+                            <h3 className="text-sm text-gray-600 market-val">
                                 Total Addressable Market (TAM)
                             </h3>
                         </th>
                         <th className="p-4 text-center font-normal">
-                            <h3 className="text-sm text-gray-600">
+                            <h3 className="text-sm text-gray-600 market-val">
                                 Serviceable Available Market (SAM)
                             </h3>
                         </th>
                         <th className="p-4 text-center font-normal">
-                            <h3 className="text-sm text-gray-600">
+                            <h3 className="text-sm text-gray-600 market-val">
                                 Serviceable Obtainable Market (SOM)
                             </h3>
                         </th>
@@ -252,7 +253,7 @@ const MarketValidation = () => {
                   <tr>
                     <td className="p-4 text-center align-middle">
                       <div className="flex flex-col items-center justify-center">
-                        <RapidCounter 
+                        <RapidCounter
                           targetValue={selectedView === 'Aggregate' ? totalMarkets.TAM : selectedMarket.TAM}
                           speed={100}
                         />

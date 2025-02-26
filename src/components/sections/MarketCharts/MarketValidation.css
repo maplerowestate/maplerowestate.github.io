@@ -11,12 +11,8 @@ button:hover p {
   opacity: 0.5;
 }
 
-#financial h1 {
-  color: white !important;
-}
-
-RapidCounter {
-  color: white !important;
+h1 {
+  color: var(--color-sage);
 }
 
 button {

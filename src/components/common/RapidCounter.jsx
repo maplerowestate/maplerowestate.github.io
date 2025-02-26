@@ -1,4 +1,4 @@
-const RapidCounter = ({ value }) => {
+const RapidCounter = ({ value, cn }) => {
   return (
     <div>
       <h1>
